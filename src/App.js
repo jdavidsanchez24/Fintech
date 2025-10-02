@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
+import AdminPage from "./pages/AdminPage";
+import UserPage from "./pages/UserPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
+  const [user, setUser] = useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Ruta de login */}
+        <Route path="/login" element={<LoginPage setUser={setUser} />} />
+
+        {/* Rutas protegidas */}
+        <Route
+          path="/admin"
+          element={user?.role === "admin" ? <AdminPage /> : <Navigate to="/login" replace />}
+        />
+        <Route
+          path="/user"
+          element={user?.role === "user" ? <UserPage /> : <Navigate to="/login" replace />}
+        />
+
+        {/* Ruta raíz redirige al login si no hay usuario */}
+        <Route
+          path="/"
+          element={<Navigate to="/login" replace />}
+        />
+      </Routes>
+    </Router>
   );
 }
 

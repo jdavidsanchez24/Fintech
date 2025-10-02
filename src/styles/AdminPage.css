@@ -1,0 +1,111 @@
+/* Contenedor general de la página */
+.admin-container {
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+/* Títulos */
+.admin-container h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.admin-container h2 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Tablas generales */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Encabezados */
+.admin-table th {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Celdas */
+.admin-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+/* Última fila sin borde */
+.admin-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Filas de estado */
+.row-approved {
+  background-color: #d4edda; /* verde suave */
+}
+
+.row-rejected {
+  background-color: #f8d7da; /* rojo suave */
+}
+
+/* Botones */
+.button-approve,
+.button-reject {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Botón aprobar */
+.button-approve {
+  background-color: #28a745;
+  margin-right: 8px;
+}
+
+.button-approve:hover {
+  background-color: #218838;
+  opacity: 0.9;
+}
+
+/* Botón rechazar */
+.button-reject {
+  background-color: #dc3545;
+}
+
+.button-reject:hover {
+  background-color: #c82333;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-table th, .admin-table td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .admin-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-container h2 {
+    font-size: 1.2rem;
+  }
+}

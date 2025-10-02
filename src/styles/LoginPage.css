@@ -1,0 +1,72 @@
+/* Fondo general */
+body{
+      background: #000;
+}
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a1a; /* gris muy oscuro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Caja de login */
+.login-box {
+  background: #2c2c2c;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Título */
+.login-box h1 {
+  color: #00bfff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Inputs */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  background: #1f1f1f;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.login-box input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #00bfff;
+}
+
+/* Botón */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #00bfff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #009acd;
+}
+
+/* Mensaje de error */
+.login-box .message {
+  color: #ff4d4d;
+  text-align: center;
+  margin-bottom: 15px;
+}
